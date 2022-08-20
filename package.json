@@ -1,0 +1,27 @@
+{
+  "name": "yumm-ke-api",
+  "version": "1.0.0",
+  "description": "Yummy-KE Backend Server API",
+  "main": "app.js",
+  "scripts": {
+    "start": "nodemon app.js"
+  },
+  "keywords": [
+    "yummy-ke",
+    "api"
+  ],
+  "author": "AmChrisKE",
+  "license": "MIT",
+  "dependencies": {
+    "apollo-server-core": "^3.10.1",
+    "apollo-server-express": "^3.10.1",
+    "cors": "^2.8.5",
+    "dotenv": "^16.0.1",
+    "express": "^4.18.1",
+    "graphql": "^16.6.0",
+    "mongoose": "^6.5.2"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.19"
+  }
+}
