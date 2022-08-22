@@ -2,26 +2,9 @@ const express = require('express')
 const http = require('http')
 const cors = require('cors')
 const { ApolloServer } = require('apollo-server-express')
-const { ApolloServerPluginDrainHttpServer, gql } = require('apollo-server-core')
-
-const typeDefs = gql`
-    type Friend {
-        name: String
-    }
-    type Query {
-        friends: [Friend]
-    }
-`
-const Friends = [
-    { name: 'Jacob' },
-    { name: 'Christopher'}
-]
-
-const resolvers = {
-    Query : {
-        friends: () => Friends
-    }
-}
+const { ApolloServerPluginDrainHttpServer } = require('apollo-server-core')
+const typeDefs = require('./schema/typeDefs')
+const resolvers = require('./schema/resolvers')
 
 async function startApolloServer(typeDefs, resolvers) {
     const app = express()
